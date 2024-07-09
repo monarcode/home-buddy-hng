@@ -90,6 +90,10 @@ export default function FeaturedSlider() {
                 View all
               </Link>
             </div>
+
+            <span className="bg-[#FF9A62] text-white px-4 py-2 absolute block top-4 right-4 text-sm rounded-lg">
+              New
+            </span>
           </CarouselItem>
         ))}
       </CarouselContent>

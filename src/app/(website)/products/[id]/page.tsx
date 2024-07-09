@@ -34,6 +34,7 @@ export default function ProductDetailsPage() {
             viewTransitionName: `product-${type}-${id}`,
           }}
           fill
+          quality={100}
         />
         <div className="h-9 absolute top-0"></div>
       </div>
