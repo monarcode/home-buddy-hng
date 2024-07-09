@@ -329,7 +329,48 @@ export const SOFAS: TProduct[] = [
   },
 ];
 
-export const VASES: TProduct[] = [];
+export const VASES: TProduct[] = [
+  {
+    id: "1",
+    name: "Beige-Flower Placer",
+    price: 12665,
+    oldPrice: 12874,
+    rating: 4.47,
+    discount: 39,
+    image: "Beige-Flower Placer",
+    type: "sofas",
+  },
+  {
+    id: "2",
+    name: "Minimal Vases",
+    price: 30800,
+    oldPrice: 36500,
+    rating: 4.38,
+    discount: 39,
+    image: "Minimal Vases",
+    type: "sofas",
+  },
+  {
+    id: "3",
+    name: "Primitive & Modern",
+    price: 9759,
+    oldPrice: 10190,
+    rating: 3.62,
+    discount: 39,
+    image: "Primitive & Modern",
+    type: "sofas",
+  },
+  {
+    id: "4",
+    name: "Minimal Sitting",
+    price: 5500,
+    oldPrice: 5650,
+    rating: 4.9,
+    discount: 39,
+    image: "Minimal Sitting",
+    type: "sofas",
+  },
+];
 
 export const DATA = {
   clearance: CLEARANCE_SALES,
