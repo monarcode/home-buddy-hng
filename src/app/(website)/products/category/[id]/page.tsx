@@ -10,10 +10,9 @@ import {
 } from "@/components/shared/product-card";
 import { DATA } from "@/constants/clearance";
 import { TProduct } from "@/types/shared";
-import { useParams, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 
 export default function ProductsByCategoryPage() {
-  const { id } = useParams();
   const searchParams = useSearchParams();
   const type = searchParams.get("type");
   const store = DATA[type as keyof typeof DATA] as TProduct[] | undefined;
@@ -26,9 +25,17 @@ export default function ProductsByCategoryPage() {
     return "/store";
   };
 
+  const backLabel = () => {
+    if (type === "clearance") return "Clearance Sales";
+    if (type === "nordic") return "Nordic Tables";
+    if (type === "sofas") return "Sofas";
+    if (type === "vases") return "Vases";
+    return "Store";
+  };
+
   return (
     <div className="container space-y-5 lg:space-y-8 mb-28 lg:mb-16">
-      <Goback label="Nordic Tables" />
+      <Goback label={backLabel()} />
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
         {store?.map((product) => (
