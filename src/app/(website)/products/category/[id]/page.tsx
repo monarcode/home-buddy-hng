@@ -17,7 +17,6 @@ export default function ProductsByCategoryPage() {
   const searchParams = useSearchParams();
   const type = searchParams.get("type");
   const store = DATA[type as keyof typeof DATA] as TProduct[] | undefined;
-  const product = store?.find((item) => item.id === id);
 
   const urlPrefix = () => {
     if (type === "clearance") return "/clearance-sales";
@@ -32,25 +31,27 @@ export default function ProductsByCategoryPage() {
       <Goback label="Nordic Tables" />
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
-        <ProductCard>
-          <ProductCardImage
-            type={product?.type}
-            id={product?.id}
-            image={`${urlPrefix()}/${product?.image}.png`}
-          >
-            <ProductCardRating value={product?.rating ?? 0} />
-          </ProductCardImage>
+        {store?.map((product) => (
+          <ProductCard key={product.id}>
+            <ProductCardImage
+              type={product?.type}
+              id={product?.id}
+              image={`${urlPrefix()}/${product?.image}.png`}
+            >
+              <ProductCardRating value={product?.rating ?? 0} />
+            </ProductCardImage>
 
-          <div className="">
-            <ProductCardPrice
-              discount={product?.oldPrice ?? 0}
-              value={product?.price ?? 0}
-            />
-            <ProductCardTitle type={product?.type} id={product?.id ?? ""}>
-              {product?.name}
-            </ProductCardTitle>
-          </div>
-        </ProductCard>
+            <div className="">
+              <ProductCardPrice
+                discount={product?.oldPrice ?? 0}
+                value={product?.price ?? 0}
+              />
+              <ProductCardTitle type={product?.type} id={product?.id ?? ""}>
+                {product?.name}
+              </ProductCardTitle>
+            </div>
+          </ProductCard>
+        ))}
       </div>
     </div>
   );
