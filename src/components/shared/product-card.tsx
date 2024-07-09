@@ -47,7 +47,7 @@ const ProductCardDiscount = ({ value }: { value?: number }) => {
 
 const ProductCardRating = ({ value }: { value?: string | number }) => {
   return (
-    <div className="absolute top-0 inset-x-0 flex items-center justify-end bg-gradient-to-b from-black/50 to-black/0">
+    <div className="absolute top-0 inset-x-0 flex items-center justify-end bg-gradient-to-b from-black/50 to-black/0 z-30">
       <p className="flex items-center gap-2 text-xs lg:text-sm font-bold p-4 text-white">
         <Image src="/star.svg" alt="star" width={16} height={16} />
         {value ?? 0}

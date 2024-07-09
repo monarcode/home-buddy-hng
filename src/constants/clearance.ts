@@ -329,8 +329,11 @@ export const SOFAS: TProduct[] = [
   },
 ];
 
+export const VASES: TProduct[] = [];
+
 export const DATA = {
   clearance: CLEARANCE_SALES,
   nordic: NORDIC_TABLES,
   sofas: SOFAS,
+  vases: VASES,
 };

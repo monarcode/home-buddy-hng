@@ -26,6 +26,13 @@ export default function ProductDetailsPage() {
   return (
     <div className="max-w-3xl mx-auto flex flex-col px-6 lg: mb-28 lg:mb-16">
       <div className="h-[412px] rounded-xl bg-stone-200 relative isolate overflow-hidden">
+        <div className="absolute top-0 inset-x-0 flex items-center justify-end bg-gradient-to-b from-black/50 to-black/0 z-30">
+          <p className="flex items-center gap-2 text-xs lg:text-sm font-bold p-4 text-white">
+            <Image src="/star.svg" alt="star" width={16} height={16} />
+            {product?.rating ?? 0}
+          </p>
+        </div>
+
         <Image
           src={`${urlPrefix()}/${product?.image}.png`}
           alt="product"
