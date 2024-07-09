@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function CheckoutPage() {
   return (
-    <div>
+    <div className="mb-28 lg:mb-16">
       <div className="container">
         <Goback label="Checkout" />
       </div>

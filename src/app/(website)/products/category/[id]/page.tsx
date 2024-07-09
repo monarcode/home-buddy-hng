@@ -28,7 +28,7 @@ export default function ProductsByCategoryPage() {
   };
 
   return (
-    <div className="container space-y-5 lg:space-y-8">
+    <div className="container space-y-5 lg:space-y-8 mb-28 lg:mb-16">
       <Goback label="Nordic Tables" />
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">

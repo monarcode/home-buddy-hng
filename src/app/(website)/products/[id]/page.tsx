@@ -24,7 +24,7 @@ export default function ProductDetailsPage() {
   };
 
   return (
-    <div className="max-w-3xl mx-auto flex flex-col px-6 lg:">
+    <div className="max-w-3xl mx-auto flex flex-col px-6 lg: mb-28 lg:mb-16">
       <div className="h-[412px] rounded-xl bg-stone-200 relative isolate overflow-hidden">
         <Image
           src={`${urlPrefix()}/${product?.image}.png`}
