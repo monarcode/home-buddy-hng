@@ -30,7 +30,7 @@ const ProductCardPrice = ({
       <p className="textsm lg:text-xl font-semibold flex-1 truncate">
         {formatCurrency(value)}
       </p>
-      <p className="text-xs lg:text-sm font-bold line-through text-[#9A9A9A] flex-1 truncate text-right">
+      <p className="text-xs lg:text-sm line-through text-[#9A9A9A] flex-1 truncate text-right">
         {formatCurrency(discount)}
       </p>
     </div>
